@@ -1,0 +1,42 @@
+{
+  "name": "nxus-md-renderer",
+  "version": "0.0.1",
+  "description": "A markdown renderer for @nxus/renderer",
+  "main": "./lib",
+  "scripts": {
+    "test": "mocha --compilers js:babel/register -R spec",
+    "compile": "babel --optional runtime -d lib/ src/",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seabourne/nxus-md-renderer.git"
+  },
+  "keywords": [
+    "nxus",
+    "markdown",
+    "md"
+  ],
+  "author": "mjreich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seabourne/nxus-md-renderer/issues"
+  },
+  "homepage": "https://github.com/seabourne/nxus-md-renderer#readme",
+  "dependencies": {
+    "babel-runtime": "^6.0.14",
+    "marked": "^0.3.5"
+  },
+  "peerDependencies": {
+    "@nxus/core": "^2.1.0",
+    "@nxus/renderer": "^2.1.0"
+  },
+  "devDependencies": {
+    "@nxus/core": "^2.1.0",
+    "babel": "^5.6.23",
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.1.0",
+    "mocha": "^2.2.5",
+    "sinon": "^1.17.2"
+  }
+}
