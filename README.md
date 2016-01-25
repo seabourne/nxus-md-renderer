@@ -6,7 +6,7 @@ Don't know Nxus? [Learn about it](http://gonxus.org).
 
 ## Installation
 
-```
+```bash
 > npm install nxus-md-renderer --save
 ```
 
@@ -14,7 +14,7 @@ Don't know Nxus? [Learn about it](http://gonxus.org).
 
 In order to use the renderer, request the Renderer.render method with either 'md' or 'markdown' as the type.
 
-```
+```javascript
 var renderer = app.get('renderer')
 renderer.request('render', 'md', '### Some Markdown Content').then((content) => {
   console.log(content)
