@@ -1,7 +1,7 @@
 {
   "name": "nxus-md-renderer",
-  "version": "4.0.0-0",
-  "description": "A markdown renderer for @nxus/renderer",
+  "version": "4.0.0-1",
+  "description": "A markdown renderer for nxus-renderer",
   "main": "lib",
   "scripts": {
     "preversion": "npm test",
@@ -30,10 +30,8 @@
   "homepage": "https://github.com/seabourne/nxus-md-renderer#readme",
   "dependencies": {
     "babel-runtime": "^6.0.14",
-    "marked": "^0.3.5"
-  },
-  "peerDependencies": {
-    "nxus-core": "^4.0.-0",
+    "marked": "^0.3.5",
+    "nxus-core": "^4.0.0-0",
     "nxus-templater": "^4.0.0-0"
   },
   "devDependencies": {
