@@ -8,11 +8,15 @@
 
 import marked from 'marked'
 
-export default class MdRenderer {
+import {renderer} from 'nxus-templater/lib/modules/renderer'
+import {NxusModule} from 'nxus-core'
+
+class MdRenderer extends NxusModule{
   
-  constructor (app, loaded) {
-    app.get('renderer').provide('renderer', 'md', this._render);
-    app.get('renderer').provide('renderer', 'markdown', this._render);
+  constructor () {
+  	super()
+    renderer.renderer('md', this._render);
+    renderer.renderer('markdown', this._render);
   }
 
   _render (content, data, callback) {
@@ -20,3 +24,5 @@ export default class MdRenderer {
   }
 }
 
+export default MdRenderer
+export let mdRenderer = MdRenderer.getProxy()
